@@ -47,12 +47,12 @@
           <div class="card" style="width: 12rem;">
             <img src='{% static "shop/test.jpeg" %}' class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">{{product.0.product_name}}</h5>
+                <p class="card-text">{{context.0.desc}}</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
             </div>
           </div>
-       </div>
+        </div>
 
         <div class="col-xs-3 col-sm-3 col-md-3">
           <div class="card" style="width: 12rem;">
