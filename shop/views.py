@@ -3,10 +3,11 @@ from django.http import HttpResponse
 from .models import Product
 
 def index(request):
-    products = Product.objects.all
+    products = Product.objects.all()
     context = {
-        'products':products,
+        'product':products,
     }
+    print(context)
     return render(request, 'shop/index.html', context)
 
 def about(request):
@@ -24,4 +25,4 @@ def productpreview(request):
     return HttpResponse('this is shop product preview page')
 
 def checkout(request):
-    return HttpResponse('this is shop chockupt point page')
+    return HttpResponse('this is shop checkout point page')
