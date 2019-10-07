@@ -1,13 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product
+import math
 
 def index(request):
     products = Product.objects.all()
+    n = len(products)
+    slides = n // 4 + math.ceil(n/4 - n//4)
     context = {
-        'product':products,
+        'totalslides':slides,
+        'range': range(1, slides), # because slide 0 is already active by default
+        'product':products,  
     }
-    print(context)
+    # print(context)
     return render(request, 'shop/index.html', context)
 
 def about(request):
