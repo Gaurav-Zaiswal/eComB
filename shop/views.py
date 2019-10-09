@@ -53,5 +53,10 @@ def search(request):
 def productpreview(request):
     return HttpResponse('this is shop product preview page')
 
+@login_required
 def checkout(request):
     return render(request, 'shop/checkout.html')
+
+
+def cart(request):
+    return render(request, 'shop/cartlist.html')
