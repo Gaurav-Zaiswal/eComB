@@ -4,10 +4,10 @@ from .models import Product
 import math
 from django.contrib.auth.decorators import login_required
 
-# def login(request):
-#     return render(request, 'authorization/login.html')
+def log_in(request):
+    return render(request, 'authorization/login.html')
 
-def logout(request):
+def log_out(request):
     return render(request, 'authorization/logout.html')
 
 def register(request):
