@@ -1,7 +1,9 @@
 from django.urls import path
 from .import views
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
+    path('login/', LoginView, {'template_naem': 'authentication/login.html'}),
     path('', views.index, name ='Index'),
     path('home/', views.index, name = 'home'),
     path('contactus/', views.contact, name = 'ContactUs'),
@@ -11,7 +13,7 @@ urlpatterns = [
     path('cart/', views.cart, name = 'Cart'),
     path('search/', views.search, name = 'Search'),
     path('checkout/', views.checkout, name = 'Checkout'),
-    path('login/', views.login, name = 'Login'),
+    # path('login/', views.login, name = 'Login'),
     path('logout/', views.logout, name = 'Logout'),
     path('register/', views.register, name = 'Register'),
     path('change-pass/', views.changePass, name = 'ChangePass'),
