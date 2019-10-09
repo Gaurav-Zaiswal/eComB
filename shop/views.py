@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product
 import math
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     products = Product.objects.all()
@@ -26,9 +27,11 @@ def index(request):
 
 def about(request):
     return render(request, 'shop/aboutus.html')
+
 def contact(request):
     return HttpResponse('this is shop contact us page')
 
+@login_required
 def tracker(request):
     return render(request, 'shop/tracker.html')
 
