@@ -9,6 +9,8 @@ urlpatterns = [
     path('tracker/', views.tracker, name = 'Tracker'),
     path('preview/', views.productpreview, name = 'Product_preview'),
     path('search/', views.search, name = 'Search'),
-    path('checkout/', views.checkout, name = 'Checkout'),
-    
+    path('login/', views.login, name = 'Login'),
+    path('logout/', views.logout, name = 'Logout'),
+    path('register/', views.register, name = 'Register'),
+    path('change-pass/', views.changePass, name = 'ChangePass'),
 ]   

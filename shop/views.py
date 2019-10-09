@@ -4,6 +4,18 @@ from .models import Product
 import math
 from django.contrib.auth.decorators import login_required
 
+def login(request):
+    return render(request, 'authorization/login.html')
+
+def logout(request):
+    return render(request, 'authorization/logout.html')
+
+def register(request):
+    return render(request, 'authorization/register.html')
+
+def changePass(request):
+    return render(request, 'authorization/change_pass.html')
+
 def index(request):
     products = Product.objects.all()
     n = len(products)

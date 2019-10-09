@@ -114,10 +114,10 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-LOGIN_URL = '/login/'
+LOGIN_URL = '/authorization/login/'
 LOGIN_REDIRECT_URL = '/home/'
 LOGIN_EXEMPT_URLS = (
-    r'^login/$',
-    r'^logout/$',
-    r'^register/$',
+    r'^authorization/login/$',
+    r'^authorization/logout/$',
+    r'^authorization/register/$',
 )
