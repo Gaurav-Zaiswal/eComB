@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Product
 import math
+from django.contrib.auth.forms import UserCreationForm
+
+def register(request):
+    form = UserCreationForm
+    return render(request, 'user/register.html', {'form': form})
 
 def index(request):
     products = Product.objects.all()
